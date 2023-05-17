@@ -10,9 +10,8 @@ import SwiftUI
 struct IntroPage: View {
     var body: some View {
         NavigationStack{
-            NavigationLink("->"){
-                namePage()
-            } .padding(.bottom, 170)
+         Text("")
+                .padding(.bottom, 170)
                 .foregroundColor(Color.gray)
             VStack{
                 HStack(){
@@ -36,14 +35,17 @@ struct IntroPage: View {
                 .buttonStyle(.bordered)
                 .cornerRadius(15)
                 .padding(.top,40)
-                    Button(){
+                    
+                    NavigationLink(destination: namePage()) {
+                        Text("Continue using Ada")
+                            .frame(maxWidth: 200)
                     }
-                label: {
-                    Text("Continue using Ada")
-                        .frame(maxWidth: 200)
+                    .buttonStyle(.borderedProminent)
+                    .cornerRadius(15)
+                    .frame(maxWidth: 200)
                 }
-                .buttonStyle(.bordered)
-                .clipShape(Capsule())
+                //.buttonStyle(.bordered)
+                //.clipShape(Capsule())
                     
                 }
                 .padding(.leading)
@@ -56,4 +58,4 @@ struct IntroPage: View {
                 IntroPage()
             }
         }
-    }
+    

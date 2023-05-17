@@ -36,10 +36,8 @@ struct startSympPage: View {
                 }
                 VStack(alignment: .trailing){
                     
-                    Button(){
-                    }
-                label: {
-                    Text("Start Symptoms Assessment")
+                    NavigationLink(destination: SearchPage()) {
+                        Text("start symptoms assessment")
                         .frame(width: 240)
                 }
                 .buttonStyle(.bordered)

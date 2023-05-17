@@ -10,9 +10,8 @@ import SwiftUI
 struct QuestionPage: View {
     var body: some View {
         NavigationStack{
-            NavigationLink("->"){
-                FeedbackPage()
-            } .padding(.top, 10)
+            Text("")
+                .padding(.top, 10)
                 .foregroundColor(Color.gray)
             VStack{
                 Text("")
@@ -35,15 +34,13 @@ struct QuestionPage: View {
                         .frame(maxWidth: .infinity)
                 }
                 VStack(alignment: .leading){
-                    Button(){
+                    NavigationLink(destination: FeedbackPage()) {
+                        Text("Less than one day")
+                            .frame(width: 200)
                     }
-                label: {
-                    Text("Less than one day")
-                        .frame(width: 200)
-                }
-                .buttonStyle(.bordered)
-                .cornerRadius(15)
-                .padding(.top,40)
+                    .buttonStyle(.bordered)
+                    .cornerRadius(15)
+                    .padding(.top,40)
                     
                     Button(){
                     }
@@ -105,11 +102,11 @@ struct QuestionPage: View {
         }
         
     }
-    
+}
     
     struct QuestionPage_Previews: PreviewProvider {
         static var previews: some View {
             QuestionPage()
         }
     }
-}
+

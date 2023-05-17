@@ -10,9 +10,8 @@ import SwiftUI
 struct GenderName: View {
     var body: some View {
         NavigationStack{
-            NavigationLink("->"){
-                BDatePage()
-            } .padding(.top, 10)
+            Text("")
+            .padding(.top, 10)
                 .foregroundColor(Color.gray)
             VStack{
                 Text("")
@@ -28,28 +27,23 @@ struct GenderName: View {
                 }
                 //.padding(.leading)
                 VStack(){
-                    Text("Are you Male\n or Female? ")
-                        .font(.title)
-                        .multilineTextAlignment(.leading)
-                        .padding(.trailing, 100)
-                        .frame(maxWidth: .infinity)
-                }
-                VStack(alignment: .trailing){
-                    
-                    Button(){
+                    VStack(alignment: .leading){
+                        Text("Are you Male\n or Female? ")
+                            .font(.title)
+                            .multilineTextAlignment(.leading)
+                            .padding(.trailing)
+                            .frame(maxWidth: .infinity)
                     }
-                label: {
-                    Text("Male")
-                        .frame(maxWidth: 70)
-                }
-                .buttonStyle(.bordered)
-                .cornerRadius(15)
-                .padding(.top,40)
-                    
-                    Button(){
+                    NavigationLink(destination: BDatePage()) {
+                        Text("Male")
+                            .frame(maxWidth: 70)
                     }
-                label: {
-                    Text("Female")
+                    .buttonStyle(.bordered)
+                    .cornerRadius(15)
+                    .padding(.top,40)
+                    
+                    NavigationLink(destination: BDatePage()) {
+                        Text("Female")
                         .frame(maxWidth: 70)
                 }
                 .buttonStyle(.bordered)
@@ -78,4 +72,5 @@ struct GenderName: View {
             GenderName()
         }
     }
+    
 }

@@ -10,10 +10,6 @@ import SwiftUI
 struct ConfirmPage: View {
     var body: some View {
         NavigationStack{
-            NavigationLink("->"){
-                CreateAccountPage()
-            } .padding(.top, 10)
-                .foregroundColor(Color.gray)
             VStack(){
                 Spacer()
                 VStack(alignment: .leading,spacing: 17){
@@ -31,15 +27,13 @@ struct ConfirmPage: View {
                     
                 }
                 VStack(alignment: .center, spacing: 20){
-                    Button(){
+                    NavigationLink(destination: CreateAccountPage()) {
+                        Text("Create your account")
+                            .frame(maxWidth: 300)
                     }
-                label: {
-                    Text("Continue with email")
-                        .frame(maxWidth: 300)
-                }
-                .buttonStyle(.borderedProminent)
-                .cornerRadius(15)
-                .padding(.top,40)
+                    .buttonStyle(.borderedProminent)
+                    .cornerRadius(15)
+                    
                     Button(){
                     }
                 label: {

@@ -10,9 +10,8 @@ import SwiftUI
 struct SearchPage: View {
     var body: some View {
         NavigationStack{
-            NavigationLink("->"){
-                QuestionPage()
-            } .padding(.top, 10)
+           Text("")
+                .padding(.top, 10)
                 .foregroundColor(Color.gray)
             VStack(alignment: .leading){
                 // Text("")
@@ -37,11 +36,8 @@ struct SearchPage: View {
                             Text("A body Temperature of 38C or higher")
                                 .font(.body)
                                 .padding(.leading,10)
-                            Button(){
-                            }
-                        label: {
-                            Text("select symptoms")
-                                .frame(width: 140)
+                            NavigationLink(destination: QuestionPage()) {
+                                Text("Select symptoms")                                .frame(width: 140)
                         }
                         .buttonStyle(.bordered)
                         .cornerRadius(15)

@@ -36,11 +36,13 @@ struct CreateAccountPage: View {
                     textFieldPass()
                     //.padding(.bottom,40)
                     VStack(alignment: .center, spacing: 24){
-                        Button(){
+                        NavigationLink(destination: IntroPage()) {
+                            Text("Continue")
+                                .frame(maxWidth: 300)
                         }
-                    label: {
-                        Text("Continue")
-                            .frame(maxWidth: 300)
+                        .buttonStyle(.borderedProminent)
+                        .cornerRadius(15)
+                           // .frame(maxWidth: 300)
                             .padding(10)
                     }
                     .cornerRadius(50)
@@ -113,4 +115,4 @@ struct CreateAccountPage: View {
             CreateAccountPage()
         }
     }
-}
+

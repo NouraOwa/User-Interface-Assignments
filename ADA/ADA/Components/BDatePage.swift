@@ -37,10 +37,8 @@ struct BDatePage: View {
                 }
                 VStack(alignment: .trailing){
                     
-                    Button(){
-                    }
-                label: {
-                    Text("Select Your birthday")
+                    NavigationLink(destination: startSympPage()) {
+                        Text("Select your Birthday")
                         .frame(maxWidth: 170)
                 }
                 .buttonStyle(.bordered)

@@ -10,9 +10,8 @@ import SwiftUI
 struct namePage: View {
     var body: some View {
         NavigationStack{
-            NavigationLink("->"){
-                GenderName()
-            } .padding(.top, 10)
+            Text("")
+                .padding(.top, 10)
                 .foregroundColor(Color.gray)
             VStack{
                 Text("")
@@ -36,10 +35,12 @@ struct namePage: View {
                 }
                 VStack(alignment: .trailing){
                     textFieldName()
-                    Button(){
+                    NavigationLink(destination: GenderName()) {
+                        Text("Send")
+                            .frame(maxWidth: 300)
                     }
-                label: {
-                    Text("Send")
+                   // .buttonStyle(.borderedProminent)
+                    .cornerRadius(15)
                         .frame(maxWidth: 70)
                         .foregroundColor(Color.gray)
                 }
@@ -80,4 +81,4 @@ struct namePage: View {
                     }
                 }
             }
-        }
+        
